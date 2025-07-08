@@ -1,0 +1,19 @@
+[core]
+	excludesfile = /Users/garymann/.gitignore_global
+	editor = vim
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[push]
+	default = current
+[alias]
+    fw = !git rebase HEAD~1 --whitespace=fix
+    b = branch
+    s = status
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false

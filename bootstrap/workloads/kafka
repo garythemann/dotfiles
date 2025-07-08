@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if ! which brew >/dev/null; then
+	printf "fatal: install Homebrew first" >&2
+	exit 1
+fi
+
+brew install "confluentinc/tap/cli"

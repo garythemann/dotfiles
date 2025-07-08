@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+if ! which brew >/dev/null; then
+	printf "fatal: install Homebrew first" >&2
+	exit 1
+fi
+
+# I'm using docker and AWS often enough that it is in the base workload
+brew --cask install "docker-desktop"
+brew install \
+	"awscli" \
+	"docker" \
+	"docker-machine" \
+	"docker-compose" \
+	"minikube" \
+	"terraform" \
+
+brew install \
+	"bat" \
+	"direnv" \
+	"entr" \
+	"fd" \
+	"gh" \
+	"git" \
+	"gitui" \
+	"gradle" \
+	"jq" \
+	"moreutils" \
+	"sd" \
+	"tailspin" \
+	"rsteube/tap/carapace"  \
+	"starship" \
+
+
+brew --cask install "font-meslo-lg-nerd-font"
+brew --cask install "iterm2"
+brew --cask install "visual-studio-code"
+brew --cask install "zed"
+
+brew install \
+	"the_silver_searcher" \
+	"tmux" \
+	"tree" \
+	"typst" \
+	"typstyle" \
+	"ugrep" \
+	"vit" \
+	"wget" \
+	"yq" \
+	"zk" \
+	"google-chrome" \
+	"rectangle" \
+	"sublime-text" \
+	"shellcheck" \
+
+brew install "carbonfrost/tap/pastiche"
+brew install "ollama"
+
+pip install powerline-status 2.7
