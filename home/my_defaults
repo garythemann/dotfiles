@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#
+defaults read com.apple.dock wvous-tl-corner wvous-tl-modifier
+
+
+# No crash reporting dialog
+defaults write com.apple.CrashReporter DialogType none
+
+# Faster key repeat speed
+defaults write -g InitialKeyRepeat -int 10  # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 3          # normal minimum is 2 (30 ms)
+
+# Lock screen on top-left hot corner using Option key
+defaults write com.apple.dock wvous-tl-corner -int 13
+defaults write com.apple.dock wvous-tl-modifier -int 524288
